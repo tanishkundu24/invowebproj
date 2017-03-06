@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="invotiateModule">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invotiate Create Invoice </title>
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/switcher.css" rel="stylesheet" />
+
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="vendors/bootstrap/css/custom.min.css" rel="stylesheet" />
+
+
+
+
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container mainbdy">
+
+            <div class="col-md-3 left_col">
+                <div class="container-fluid flulft" style="width:100%;">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title leftalign" style="border: 0;">
+                            <a href="dashboard.html" class="site_title"><span>Invotiate</span></a>
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- menu profile quick info -->
+                        <!--<div class="profile clearfix">
+                          <div class="profile_pic">
+                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                          </div>
+                          <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>John Doe</h2>
+                          </div>
+                        </div>-->
+                        <!-- /menu profile quick info -->
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+
+                                <ul class="nav side-menu">
+
+
+                                    <li>
+                                        <a><i class="fa fa-user-o"></i> Profile <span class="fa fa-chevron-circle-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a ng-href="javascript:void(0)">Profile Settings</a></li>
+                                            <li><a ng-href="javascript:void(0)">Billing &amp; Pricing</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-bell-o"></i>Notifications </a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-dashboard"></i>Dashboard </a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-line-chart"></i>My Activity </a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-upload"></i>File Upload </a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Calendar </a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-phone"></i>Connect </a></li>
+                                    <li>
+                                        <a><i class="fa fa-support"></i>Help<span class="fa fa-chevron-circle-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="javascript:void(0)">Initiate Offer</a></li>
+                                            <li><a href="javascript:void(0)">Bulk Upload</a></li>
+                                            <li><a href="javascript:void(0)">Negotiate Terms</a></li>
+                                            <li><a href="javascript:void(0)">My Activity</a></li>
+                                            <li><a href="javascript:void(0)">My Dash Board</a></li>
+                                            <li><a href="javascript:void(0)">My Connections</a></li>
+                                            <li><a href="javascript:void(0)">FAQS</a></li>
+                                            <li><a href="javascript:void(0)">Support</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-sign-out"></i>Logout </a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /sidebar menu -->
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- page content -->
+            <div class="right_col" role="main" style="padding: 10px 11px 10px 10px;">
+                <form class="form-horizontal form-label-left">
+                    <!-- top navigation -->
+                    <div class="top_nav">
+                        <div class="nav_menu">
+                            <nav>
+                                <div class="col-md-1 col-sm-1 col-xs-12">
+                                    <div class="nav toggle">
+                                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-12 form-group pull-left top_search tpsrch">
+
+                                    <div class="input-group" style="width:100%;">
+                                        <div class="input-append search-input-area">
+                                            <input class="" id="appendedInputButton" type="text">
+                                            <button class="btn" type="button">Go </button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div id="tprgt" class="col-md-4 col-sm-4 col-xs-12" style="">
+                                    <div id="tpbtn" style="">
+                                        <button type="button" class="btnntp btn-default btnbdr" style="border:2px solid #24d471;color:#333;background:#fff;">Invotiate Now</button>
+                                    </div>
+                                    <div style="width:100px;float:right;">
+                                        <select class="form-control txtbdrtpdrw" style="border:none;">
+                                            <option>abc ltd</option>
+                                            <option>Company 1</option>
+                                            <option>Company 2</option>
+                                        </select>
+                                        <!--<ul class="nav navbar-nav navbar-right" style="width:100%;">
+                                            <li class="">
+                                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    Company Name
+                                                    <span class="fa fa-angle-down"></span>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                                    <li><a href="javascript:;"> Company1</a></li>
+                                                    <li><a href="javascript:;"> Company2</a></li>
+
+                                                </ul>
+                                            </li>
+
+                                        </ul>-->
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- /top navigation -->
+                    <div class="">
+
+                        <div class="page-title">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="x_panel rd thuimgn">
+
+
+                                    <!--POPUP Parts starts here-->
+                                    <div class="col-xs-12 thuimgnthk">
+                                        <div class="form-group mrgbttm pdrilft">
+
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12">
+                                                    <div class="bspadithk">
+                                                        <strong>Thank you !!! XXXXXXXXXXXXX</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12">
+                                                    <div class="bspadithk">
+                                                        <span>Please Note Your Confirmation no is 12345</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 righttext"></label>
+                                                            <div class="col-md-9 col-sm-9 col-xs-12" style="margin-bottom:6px;">
+                                                                <div class="bspadithku">
+                                                                    <small>Share this internally</small>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 righttext"></label>
+                                                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom:6px;">
+                                                                <input type="text" placeholder="First Name" class="form-control txtbdr" />
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom:6px;">
+                                                                <input type="text" placeholder="Email Address" class="form-control txtbdr" />
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 righttext"></label>
+                                                        <div class="col-md-9 col-sm-9 col-xs-12" style="margin-bottom:6px;">
+                                                            <div class="col-md-5 col-sm-5 col-xs-12" style="margin-bottom:6px;">
+
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom:6px;">
+                                                                <div>
+                                                                    <span class="small">Use (;) to add more email addresses</span>
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xs-12">
+
+                                                <div class="col-xs-12 clrdvs"></div>
+
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 clrdvs"></div>
+                                                <div class="col-xs-12 btnspot">
+                                                    <button type="submit" class="btn btn-success bttnfon sbbtn" data-color="success">Submit</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                            <div class="col-xs-12 clrdvs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--POPUP Parts Ends here-->
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /page content -->
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/angular.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script src="scripts/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="scripts/bootstrap.min.js"></script>
+
+
+    <!-- Custom Theme Scripts -->
+    <script src="scripts/custom.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+</body>
+</html>

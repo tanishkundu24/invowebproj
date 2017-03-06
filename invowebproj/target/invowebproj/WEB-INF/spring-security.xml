@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:security="http://www.springframework.org/schema/security"
+ 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security.xsd">
+ 
+<security:http auto-config="true">
+<security:intercept-url pattern="/home" access="hasRole ('ROLE_USER') " />
+<security:form-login
+		    login-page="/login"
+		    login-processing-url="/j_spring_security_check"
+		    default-target-url="/password-verification"
+			username-parameter="email"
+			password-parameter="password"
+			authentication-success-handler-ref="customAuthenticationSuccessHandler" 
+			authentication-failure-handler-ref="customAuthenticationErrorHandler"/>
+<security:logout invalidate-session="true" logout-success-url="/logout" logout-url="/j_spring_security_logout"/>			
+<security:csrf disabled="true" />
+<security:remember-me
+token-validity-seconds="300"
+remember-me-parameter="rememberme"
+data-source-ref="invotiatedataSource" />
+</security:http>
+ 
+<security:authentication-manager>
+<security:authentication-provider>
+<security:jdbc-user-service
+data-source-ref="invotiatedataSource"
+users-by-username-query="select eMail,password,isActive from User where eMail=?"
+authorities-by-username-query="select eMail,'ROLE_USER' from User where eMail=?"
+/>
+</security:authentication-provider>
+</security:authentication-manager>
+ 
+</beans>
